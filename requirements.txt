@@ -1,0 +1,16 @@
+python-dotenv
+email-validator>=2.0.0
+pandas>=2.0.0
+numpy<2.0.0
+scikit-learn
+joblib
+textblob
+nltk
+xgboost
+lightgbm
+wandb
+boto3
+fastapi
+uvicorn
+streamlit
+deep-translator
