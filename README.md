@@ -6,11 +6,11 @@
 - 학습 인스턴스 A: Airflow를 통한 데이터 수집, 전처리, 학습 및 WandB 실험 기록 관리
 - 모델 레지스트리 (AWS S3): 모델 아티팩트(Model & Encoder) 저장소
 - 서빙 인스턴스 B: FastAPI를 통한 예측 API 제공 및 Streamlit UI 서비스
-<img src="images/아키텍처0.png" width="400" height="200"> 
-<img src="images/아키텍처1.png" width="400" height="200">
+<img src="images/아키텍처0.png" width="800" height="600"> 
+<img src="images/아키텍처1.png" width="800" height="600">
 
 ## 2. Tree
-<img src="images/tree.png" width="400" height="200"> 
+<img src="images/tree.png" width="450" height="400"> 
 
 ## 3. 핵심 기술 스택
 - Orchestration: Apache Airflow
