@@ -10,7 +10,32 @@
 <img src="images/아키텍처1.png" width="800" height="600">
 
 ## 2. Tree
-<img src="images/tree.png" width="450" height="400"> 
+
+```
+├── app/
+│   ├──model/                            # S3에서 다운로드 받은 모델/인코더 임시저장
+│   └──main.py                           # FastAPI 서빙 및 S3 모델 자동 다운로드 로직
+├── dags/
+│   └── movie_pipeline.py                # Airflow DAG파일
+├── data-prepare/                        # 데이터, 모델 아티팩트 관리
+│ ├── movies_cleaned_{ds}.csv            # 전처리된 학습용 데이터 (날짜별)     
+│ ├── main_genre_encoder.pkl             # 전처리에 사용된 장르 인코더
+│ ├── original_language_encoder.pkl      # 전처리에 사용된 언어 인코더     
+│ ├── model_{ds}.pkl                     # 모델 백업본 (날짜별)
+│ ├── best_model.pkl                     # 베스트 모델
+│ └── best_score.txt                     # 베스트 모델의 rmse_gap 기록 파일
+├── scripts/                
+│   ├── collect.py                       # 데이터 수집
+│   ├── preprocess.py                    # 데이터 전처리
+│   ├── train.py                         # WandB 연동 모델 학습 및 베스트 모델 선별
+│   ├── parameters.py                    # 모델 하이퍼파라미터 및 설정값 관리
+│   └── deploy.py                        # S3로 베스트모델 업로드
+├── .env                                 # 환경변수
+├── app.py                               # Streamlit 웹UI
+├── Dockerfile                      
+├── docker-compose-airflow.yaml          # 학습환경 실행 설정
+└── docker-compose-fastapi.yaml          # 서빙환경 실행 설정
+```
 
 ## 3. 핵심 기술 스택
 - Orchestration: Apache Airflow
