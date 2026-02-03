@@ -37,7 +37,7 @@
 │ ├── model_{ds}.pkl                     # 모델 백업본 (날짜별)
 │ ├── best_model.pkl                     # 베스트 모델
 │ └── best_score.txt                     # 베스트 모델의 rmse_gap 기록 파일
-├── scripts/                
+├── src/                
 │   ├── collect.py                       # 데이터 수집
 │   ├── preprocess.py                    # 데이터 전처리
 │   ├── train.py                         # WandB 연동 모델 학습 및 베스트 모델 선별
