@@ -23,7 +23,7 @@
 <img src="images/아키텍처0.png" width="800" height="600"> 
 <img src="images/아키텍처1.png" width="800" height="600">
 
-## 3. Tree
+## 3. 프로젝트 구조
 ```
 ├── app/
 │   ├──model/                            # S3에서 다운로드 받은 모델/인코더 임시저장
